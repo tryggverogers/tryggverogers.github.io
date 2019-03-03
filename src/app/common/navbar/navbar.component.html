@@ -1,0 +1,85 @@
+<nav class="navbar navbar-default navbar-fixed-top nav-main-wrapper">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand navbar-link" href="#"><strong>DTF Customs</strong></a>
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="nav navbar-nav">
+            <li class="active" id="home-link">
+              <a pageScroll href="#header" (pageScrollFinish)="postScroll('home-link', $event)" routerLink="/">Home</a>
+            </li>
+            <li id="about-link">
+              <a pageScroll href="#about" (pageScrollFinish)="postScroll('about-link', $event)" routerLink="/">About</a>
+            </li>
+            <li id="services-link">
+              <a pageScroll href="#services" (pageScrollFinish)="postScroll('services-link', $event)" routerLink="/">Services</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+              <!-- <li>
+                <a (click)="openDialog()">Contact</a>
+                 <button (click)="openDialog()">Open Dialog</button>
+              </li> -->
+              <li routerLinkActive="inactive"><a href="mailto:dtfcustom@gmail.com?Subject=Trade%20My%20Crypto">Contact Us</a></li>
+          </ul>
+          <div class="popup" style="margin: auto; width: 50%;"></div>
+          <!-- for logging in -->
+          <!-- <ul *ngIf="!loggedIn" class="nav navbar-nav navbar-right">
+            <li routerLinkActive="active"><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li routerLinkActive="active"><a routerLink="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+          </ul> -->
+          <!-- <ul *ngIf="loggedIn" class="nav navbar-nav navbar-right">
+            <li routerLinkActive="active"><a routerLink="/profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li routerLinkActive="active"><a href="#" (click)="logout($event)"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+         </ul> -->
+      </div>
+  </div>
+  <!-- <form id="popup" [style.opacity]="popupOpacity">
+    <div class="form-group-group">
+      <div class="form-group">
+        <label for="inputName"></label>
+        <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Name">
+      </div>
+      <div class="form-group">
+          <label for="inputEmail"></label>
+          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+      </div>
+      <div class="form-group">
+          <label for="inputEmail"></label>
+          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Preferred Package">
+      </div>
+      <div class="form-group">
+          <label for="inputMessage"></label>
+          <textarea class="form-control" name="messageText" cols="40" rows="5" placeholder="Message"></textarea>
+          <small id="emailHelp" class="form-text text-muted"></small>
+      </div>
+      <div class="form-inline">
+        <button class="btn btn-default" (click)="closePopup()">Close</button>
+        <button class="btn btn-primary" (click)="submit()">Submit</button>
+      </div>
+    </div>
+  </form> -->
+  <!-- <form id="popup" action="/my-handling-form-page" method="post" [style.opacity]="popupOpacity">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name">
+    </div>
+    <div>
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="user_mail">
+    </div>
+    <div>
+      <label for="msg">Message:</label>
+      <textarea id="msg" name="user_message"></textarea>
+    </div>
+    <button (click)="closePopup()">cancel</button>
+    <button (click)="submit()">submit</button>
+  </form> -->
+</nav>
